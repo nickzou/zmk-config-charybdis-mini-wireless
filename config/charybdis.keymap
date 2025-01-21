@@ -1,11 +1,7 @@
-#include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/outputs.h>
-
-#define U_TAPPING_TERM 200
 
 &lt {
     tapping-term-ms = <200>;
@@ -99,5 +95,4 @@
             trackball-bindings = <&tmv_fine>;//精准指针层
         };
     };
-};
 };
