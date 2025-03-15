@@ -36,12 +36,12 @@
 
         layer_1 {
             bindings = <
-&kp F1        &kp F2          &kp F3          &kp F4                    &kp F5     &kp F6                  &kp F7                 &kp F8              &kp F9                &kp F10           &kp F11              &kp F12
-&trans        &kp TILDE       &trans          &kp UP_ARROW              &trans     &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N7              &kp N8                &kp N9            &kp N0               &kp STAR
-&trans        &kp LEFT_SHIFT  &kp LEFT_ARROW  &kp DOWN_ARROW            &kp RIGHT  &kp LBKT                &kp RBKT               &mt RIGHT_SHIFT N4  &mt RIGHT_CONTROL N5  &mt RIGHT_ALT N6  &mt RIGHT_GUI MINUS  &kp PLUS
-&kp LEFT_ALT  &kp LEFT_GUI    &kp MINUS       &kp LG(LC(LS(NUMBER_4)))  &kp PLUS   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N1              &kp N2                &kp N3            &kp BACKSLASH        &kp EQUAL
-                                              &trans                    &trans     &trans                  &trans                 &trans
-                                                                        &trans     &trans                  &trans
+&kp F1  &kp F2     &kp F3          &kp F4                    &kp F5     &kp F6                  &kp F7                 &kp F8              &kp F9                &kp F10           &kp F11              &kp F12
+&trans  &kp TILDE  &trans          &kp UP_ARROW              &trans     &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N7              &kp N8                &kp N9            &kp N0               &kp STAR
+&trans  &trans     &kp LEFT_ARROW  &kp DOWN_ARROW            &kp RIGHT  &kp LBKT                &kp RBKT               &mt RIGHT_SHIFT N4  &mt RIGHT_CONTROL N5  &mt RIGHT_ALT N6  &mt RIGHT_GUI MINUS  &kp PLUS
+&trans  &trans     &kp MINUS       &kp LG(LC(LS(NUMBER_4)))  &kp PLUS   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N1              &kp N2                &kp N3            &kp BACKSLASH        &kp EQUAL
+                                   &trans                    &trans     &trans                  &trans                 &trans
+                                                             &trans     &trans                  &trans
             >;
         };
 
@@ -68,4 +68,3 @@
         };
     };
 };
-
