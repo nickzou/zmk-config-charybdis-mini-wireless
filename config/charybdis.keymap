@@ -52,10 +52,10 @@
 
         layer_1 {
             bindings = <
-&kp F1  &kp F2     &kp F3         &kp F4                 &kp F5           &kp F6               &kp F7     &kp F8              &kp F9                &kp F10           &kp F11              &kp F12
-&trans  &trans     &trans         &trans                 &trans           &trans               &trans     &trans              &trans                &trans            &trans               &trans
-&trans  &kp TILDE  &kp PIPE       &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LBKT             &trans     &mt RIGHT_SHIFT N4  &mt RIGHT_CONTROL N5  &mt RIGHT_ALT N6  &mt RIGHT_GUI MINUS  &kp PLUS
-&trans  &kp GRAVE  &kp BACKSLASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET    &kp UNDER  &kp PLUS            &kp EQUAL             &kp N3            &kp BACKSLASH        &kp EQUAL
+&kp F1  &kp F2     &kp F3         &kp F4                 &kp F5           &kp F6               &kp F7     &kp F8    &kp F9     &kp F10           &kp F11              &kp F12
+&trans  &trans     &trans         &trans                 &trans           &trans               &trans     &trans    &trans     &trans            &trans               &trans
+&trans  &kp TILDE  &kp PIPE       &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LBKT             &kp UNDER  &kp PLUS  &kp EQUAL  &mt RIGHT_ALT N6  &mt RIGHT_GUI MINUS  &trans
+&trans  &kp GRAVE  &kp BACKSLASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET    &trans     &trans    &trans     &trans            &trans               &trans
                                   &trans                 &trans           &trans               &trans     &trans
                                                          &trans           &trans               &trans
             >;
