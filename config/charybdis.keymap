@@ -2,6 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt { flavor = "tap-preferred"; };
 
@@ -51,12 +52,12 @@
 
         layer_1 {
             bindings = <
-&kp F1  &kp F2     &kp F3          &kp F4                    &kp F5     &kp F6                  &kp F7                 &kp F8              &kp F9                &kp F10           &kp F11              &kp F12
-&trans  &kp TILDE  &trans          &kp UP_ARROW              &trans     &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp N7              &kp N8                &kp N9            &kp N0               &kp STAR
-&trans  &trans     &kp LEFT_ARROW  &kp DOWN_ARROW            &kp RIGHT  &kp LBKT                &kp RBKT               &mt RIGHT_SHIFT N4  &mt RIGHT_CONTROL N5  &mt RIGHT_ALT N6  &mt RIGHT_GUI MINUS  &kp PLUS
-&trans  &trans     &kp MINUS       &kp LG(LC(LS(NUMBER_4)))  &kp PLUS   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N1              &kp N2                &kp N3            &kp BACKSLASH        &kp EQUAL
-                                   &trans                    &trans     &trans                  &trans                 &trans
-                                                             &trans     &trans                  &trans
+&kp F1  &kp F2     &kp F3         &kp F4                 &kp F5           &kp F6               &kp F7     &kp F8              &kp F9                &kp F10           &kp F11              &kp F12
+&trans  &trans     &trans         &trans                 &trans           &trans               &trans     &trans              &trans                &trans            &trans               &trans
+&trans  &kp TILDE  &kp PIPE       &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LBKT             &trans     &mt RIGHT_SHIFT N4  &mt RIGHT_CONTROL N5  &mt RIGHT_ALT N6  &mt RIGHT_GUI MINUS  &kp PLUS
+&trans  &kp GRAVE  &kp BACKSLASH  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET    &kp UNDER  &kp PLUS            &kp EQUAL             &kp N3            &kp BACKSLASH        &kp EQUAL
+                                  &trans                 &trans           &trans               &trans     &trans
+                                                         &trans           &trans               &trans
             >;
         };
 
@@ -64,8 +65,8 @@
             bindings = <
 &trans  &trans        &trans      &trans      &trans       &trans           &trans     &trans         &trans     &trans     &trans    &trans
 &trans  &kp EXCL      &kp AT      &kp HASH    &kp DOLLAR   &kp PERCENT      &kp CARET  &kp AMPERSAND  &kp ASTRK  &kp GRAVE  &kp PIPE  &kp DELETE
-&trans  &bt BT_CLR    &bt BT_PRV  &bt BT_NXT  &kp PAGE_UP  &kp PAGE_DOWN    &trans     &trans         &trans     &trans     &trans    &trans
-&trans  &kp LEFT_GUI  &kp INS     &kp HOME    &kp END      &trans           &kp UNDER  &kp EQUAL      &trans     &trans     &trans    &trans
+&trans  &bt BT_CLR    &bt BT_PRV  &bt BT_NXT  &kp PAGE_UP  &kp PAGE_DOWN    &kp LEFT   &kp DOWN       &kp UP     &kp RIGHT  &trans    &trans
+&trans  &kp LEFT_GUI  &kp INS     &kp HOME    &kp END      &trans           &trans     &trans         &trans     &trans     &trans    &trans
                                   &trans      &trans       &trans           &trans     &trans
                                               &trans       &trans           &trans
             >;
