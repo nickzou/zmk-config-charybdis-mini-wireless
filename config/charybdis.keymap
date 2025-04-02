@@ -2,6 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt { flavor = "tap-preferred"; };
 
@@ -31,7 +32,7 @@
             #binding-cells = <2>;
             hold-trigger-key-positions = <55>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
         };
 
         mt_vim_emmet: mt_vim_emmet {
