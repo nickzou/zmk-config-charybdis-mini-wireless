@@ -2,6 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &mt { flavor = "tap-preferred"; };
 
@@ -162,6 +163,48 @@
             bindings = <&kp LC(B) &kp NUMBER_9>;
             label = "TMUX_W_9";
         };
+
+        tmux_create: tmux_create {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp C>;
+            label = "TMUX_CREATE";
+        };
+
+        tmux_left: tmux_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp LEFT>;
+            label = "TMUX_LEFT";
+        };
+
+        tmux_down: tmux_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp DOWN_ARROW>;
+            label = "TMUX_DOWN";
+        };
+
+        tmux_up: tmux_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp UP_ARROW>;
+            label = "TMUX_UP";
+        };
+
+        tmux_right: tmux_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp RIGHT_ARROW>;
+            label = "TMUX_RIGHT";
+        };
+
+        tmux_sessions: tmux_sessions {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(B) &kp S>;
+            label = "TMUX_SESSIONS";
+        };
     };
 
     keymap {
@@ -191,24 +234,33 @@
 
         layer_2 {
             bindings = <
-&trans  &tmux_w_1     &tmux_w_2     &tmux_w_3     &tmux_w_4      &tmux_w_5       &tmux_w_6  &tmux_w_7  &tmux_w_8  &tmux_w_9    &trans  &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4    &trans     &trans     &trans     &tmux_other  &trans  &trans
-&trans  &bt BT_CLR    &bt BT_PRV    &bt BT_NXT    &kp PAGE_DOWN  &kp PAGE_UP     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT    &trans  &trans
-&trans  &tmux_zoom    &tmux_kill    &kp INSERT    &kp END        &kp HOME        &trans     &trans     &trans     &trans       &trans  &trans
-                                    &trans        &trans         &trans          &trans     &trans
-                                                  &trans         &trans          &trans
+&trans  &tmux_w_1   &tmux_w_2       &tmux_w_3     &tmux_w_4  &tmux_w_5    &tmux_w_6   &tmux_w_7   &tmux_w_8  &tmux_w_9    &trans  &trans
+&trans  &trans      &trans          &trans        &trans     &trans       &trans      &trans      &trans     &tmux_other  &trans  &trans
+&trans  &trans      &tmux_sessions  &trans        &trans     &trans       &tmux_left  &tmux_down  &tmux_up   &tmux_right  &trans  &trans
+&trans  &tmux_zoom  &tmux_kill      &tmux_create  &trans     &trans       &trans      &trans      &trans     &trans       &trans  &trans
+                                    &trans        &trans     &trans       &trans      &trans
+                                                  &trans     &trans       &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans    &trans          &trans        &trans           &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans    &trans          &trans        &trans           &trans  &trans
+&trans  &bt BT_CLR    &bt BT_PRV    &bt BT_NXT    &trans        &trans          &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans          &trans    &trans          &trans        &trans           &trans  &trans
+                                    &trans        &trans        &trans          &trans    &trans
+                                                  &trans        &trans          &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        SYSTEM {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
