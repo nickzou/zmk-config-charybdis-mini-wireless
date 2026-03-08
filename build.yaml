@@ -13,8 +13,8 @@
 #
 ---
 include:
-  - board: nice_nano_v2/nrf52840/zmk
+  - board: nice_nano//zmk
     shield: charybdis_left
-  - board: nice_nano_v2/nrf52840/zmk
+  - board: nice_nano//zmk
     shield: charybdis_right
 
